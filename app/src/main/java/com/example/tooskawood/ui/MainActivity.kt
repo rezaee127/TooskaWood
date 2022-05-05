@@ -1,4 +1,4 @@
-package ui
+package com.example.tooskawood.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

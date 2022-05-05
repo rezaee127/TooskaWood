@@ -1,4 +1,4 @@
-package ui
+package com.example.tooskawood.ui
 
 import android.view.LayoutInflater
 import android.view.View

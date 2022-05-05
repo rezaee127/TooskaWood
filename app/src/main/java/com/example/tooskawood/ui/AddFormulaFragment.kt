@@ -1,4 +1,4 @@
-package ui
+package com.example.tooskawood.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

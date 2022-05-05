@@ -1,16 +1,17 @@
+package com.example.tooskawood
+
 import android.content.Context
 import androidx.lifecycle.LiveData
-import com.example.tooskawood.Formula
-import database.AppDatabase
-import database.FormulaDao
+import com.example.tooskawood.database.MyAppDatabase
+import com.example.tooskawood.database.FormulaDao
 
 object Repository {
-    lateinit var db: AppDatabase
+    lateinit var db: MyAppDatabase
     lateinit var formulaDao: FormulaDao
 
 
-    fun initDB(context: Context): AppDatabase {
-        db = AppDatabase.getMyDataBase(context)
+    fun initDB(context: Context): MyAppDatabase {
+        db = MyAppDatabase.getMyDataBase(context)
         formulaDao = db.formulaDao()
         return db
     }

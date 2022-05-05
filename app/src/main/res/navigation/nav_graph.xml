@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/showFormulaFragment"
-        android:name="ui.ShowFormulaFragment"
+        android:name="com.example.tooskawood.ui.ShowFormulaFragment"
         android:label="fragment_show_formula"
         tools:layout="@layout/fragment_show_formula" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFormulaFragment"
-        android:name="ui.AddFormulaFragment"
+        android:name="com.example.tooskawood.ui.AddFormulaFragment"
         android:label="fragment_add_formula"
         tools:layout="@layout/fragment_add_formula" />
 </navigation>

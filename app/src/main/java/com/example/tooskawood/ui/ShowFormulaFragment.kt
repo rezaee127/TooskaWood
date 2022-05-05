@@ -1,4 +1,4 @@
-package ui
+package com.example.tooskawood.ui
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -13,7 +13,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.tooskawood.R
 import com.example.tooskawood.databinding.FragmentShowFormulaBinding
-import viewModel.MainViewModel
+import com.example.tooskawood.viewModel.MainViewModel
 
 
 class ShowFormulaFragment : Fragment() {
