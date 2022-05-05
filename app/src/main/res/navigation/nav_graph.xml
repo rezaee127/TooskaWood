@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/showFormulaFragment">
 
+    <fragment
+        android:id="@+id/showFormulaFragment"
+        android:name="com.example.tooskawood.ShowFormulaFragment"
+        android:label="fragment_show_formula"
+        tools:layout="@layout/fragment_show_formula" />
+    <fragment
+        android:id="@+id/addFormulaFragment"
+        android:name="com.example.tooskawood.AddFormulaFragment"
+        android:label="fragment_add_formula"
+        tools:layout="@layout/fragment_add_formula" />
 </navigation>
