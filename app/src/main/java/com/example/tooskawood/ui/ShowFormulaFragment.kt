@@ -89,11 +89,12 @@ class ShowFormulaFragment : Fragment() {
                 val id = vModel.searchFormula(binding.editTextSearch.text.toString())
                 goToDetailFragment(id)
             }
+
         }
     }
 
     private fun goToDetailFragment(id: Int) {
         val bundle = bundleOf("id" to id)
-       // findNavController().navigate(R.id.action_showFormulaFragment_to_detailFragment, bundle)
+        findNavController().navigate(R.id.action_showFormulaFragment_to_detailOfFormulaFragment, bundle)
     }
 }
