@@ -18,5 +18,9 @@
         android:id="@+id/addFormulaFragment"
         android:name="com.example.tooskawood.ui.AddFormulaFragment"
         android:label="fragment_add_formula"
-        tools:layout="@layout/fragment_add_formula" />
+        tools:layout="@layout/fragment_add_formula" >
+        <action
+            android:id="@+id/action_addFormulaFragment_to_showFormulaFragment"
+            app:destination="@id/showFormulaFragment" />
+    </fragment>
 </navigation>
