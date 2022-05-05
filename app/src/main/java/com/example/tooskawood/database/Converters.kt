@@ -22,7 +22,7 @@ class Converters {
             if(str.isNullOrBlank())
                 break
             var items = str.split(',')
-            list.add(Item(items[0].toInt(), items[1],items[2]))
+            list.add(Item(items[0].toInt(), items[1],items[2].toInt()))
         }
         return list
     }

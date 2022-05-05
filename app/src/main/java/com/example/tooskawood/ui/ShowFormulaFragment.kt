@@ -11,6 +11,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.tooskawood.Formula
+import com.example.tooskawood.Item
 import com.example.tooskawood.R
 import com.example.tooskawood.databinding.FragmentShowFormulaBinding
 import com.example.tooskawood.viewModel.MainViewModel
@@ -44,6 +46,11 @@ class ShowFormulaFragment : Fragment() {
     private fun setRecyclerView() {
         val formulaAdapter = FormulaAdapter({ goToDetailFragment(it) })
         binding.formulaRecyclerView.adapter = formulaAdapter
+        val formula1= Formula(1,"formula1",listOf(Item(1,"سرب", 120),Item(2,"نیکل", 150)))
+        val formula2= Formula(2,"formula2",listOf(Item(1,"قلع", 140),Item(2,"آهن", 220)))
+        vModel.insert(formula1)
+        vModel.insert(formula2)
+
         formulaAdapter.submitList(vModel.getFormulaList())
     }
 
