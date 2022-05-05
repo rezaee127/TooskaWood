@@ -1,28 +1,29 @@
-package com.example.tooskawood
+package ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tooskawood.databinding.FragmentAddFormulaBinding
+import com.example.tooskawood.databinding.FragmentShowFormulaBinding
 
-class AddFormulaFragment : Fragment() {
-    lateinit var binding : FragmentAddFormulaBinding
+
+class ShowFormulaFragment : Fragment() {
+    lateinit var binding : FragmentShowFormulaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentAddFormulaBinding.inflate (inflater, container, false)
+    ): View {
+        binding = FragmentShowFormulaBinding.inflate (inflater, container, false)
         return binding.root
-
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_add_formula, container, false)
+        //return inflater.inflate(R.layout.fragment_show_formula, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
