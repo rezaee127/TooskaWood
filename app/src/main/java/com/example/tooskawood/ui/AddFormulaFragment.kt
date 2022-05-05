@@ -66,10 +66,10 @@ class AddFormulaFragment : Fragment() {
 
                 else ->{
                     for (i in listOfEditTextMaterialNames.indices){
-                        if (listOfEditTextMaterialNames[i].text!=""){
+                        if (listOfEditTextMaterialValues[i].text.toString()!=""){
                             listOfMaterials.add(Material(i+1,
                                 listOfEditTextMaterialNames[i].text.toString(),
-                                listOfEditTextMaterialValues[i].text.toString().toInt()))
+                                listOfEditTextMaterialValues[i].text.toString().toLong()))
                         }
                     }
 
