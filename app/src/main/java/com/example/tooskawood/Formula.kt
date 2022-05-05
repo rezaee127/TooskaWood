@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Formula(@PrimaryKey(autoGenerate=true)var id:Int, var code:String, var items:List<Item> )
+data class Formula(@PrimaryKey(autoGenerate=true)var id:Int, var code:String, var items:List<Material> )
 
 
-data class Item(var id:Int,var name:String,var value:Int)
+data class Material(var id:Int, var name:String, var value:Int)
