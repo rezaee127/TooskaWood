@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.example.tooskawood.Formula
-import com.example.tooskawood.Repository
+import com.example.tooskawood.repository.Repository
 
 class MainViewModel(app: Application): AndroidViewModel(app) {
 
