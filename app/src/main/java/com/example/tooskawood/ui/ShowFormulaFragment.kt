@@ -77,7 +77,7 @@ class ShowFormulaFragment : Fragment() {
 
         binding.buttonSearch.setOnClickListener {
             if (binding.editTextSearch.text.isNullOrBlank())
-                binding.editTextSearch.error = "یک کد وارد کنید"
+                binding.editTextSearch.error = "یک کد فرمول وارد کنید"
             else if (vModel.searchFormula(binding.editTextSearch.text.toString()) == 0) {
                 val dialog = AlertDialog.Builder(requireContext())
                 dialog.setMessage("The desired code does not exist")
