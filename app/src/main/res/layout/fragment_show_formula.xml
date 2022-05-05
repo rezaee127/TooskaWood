@@ -42,7 +42,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="کلمه"
+        android:hint="کد فرمول"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
