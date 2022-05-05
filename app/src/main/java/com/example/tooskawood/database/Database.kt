@@ -9,7 +9,7 @@ import androidx.room.TypeConverters
 import com.example.tooskawood.Formula
 
 
-@Database(entities = [Formula::class], version = 4)
+@Database(entities = [Formula::class], version = 5)
 @TypeConverters(Converters::class)
 abstract class MyAppDatabase : RoomDatabase() {
     abstract fun formulaDao(): FormulaDao
