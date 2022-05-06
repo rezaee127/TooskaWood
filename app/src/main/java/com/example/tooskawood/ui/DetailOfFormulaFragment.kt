@@ -29,7 +29,7 @@ class DetailOfFormulaFragment : Fragment() {
         binding = FragmentDetailOfFormulaBinding.inflate (inflater, container, false)
         return binding.root
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_detial_of_formula, container, false)
+        //return inflater.inflate(R.layout.fragment_detail_of_formula, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,6 +43,7 @@ class DetailOfFormulaFragment : Fragment() {
         binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
         binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,id,{edit(id)})
 
+        convertValue(id)
 
         binding.buttonEdit.setOnClickListener {
             edit(id)
@@ -50,6 +51,14 @@ class DetailOfFormulaFragment : Fragment() {
 
         binding.buttonDelete.setOnClickListener {
             delete(id)
+        }
+
+    }
+
+    private fun convertValue(id:Int) {
+        var sumValue=0L
+        for(i in vModel.getFormula(id).materials.indices){
+            sumValue +=vModel.getFormula(id).materials[i].value
         }
 
     }

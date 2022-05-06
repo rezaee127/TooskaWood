@@ -74,33 +74,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         android:text="ویرایش فرمول"
         app:cornerRadius="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonDelete"
-        app:layout_constraintTop_toBottomOf="@+id/MaterialRecyclerView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberForConvert" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonDelete"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="?attr/materialButtonOutlinedStyle"
         android:layout_marginHorizontal="24dp"
         android:text="حذف فرمول"
         app:cornerRadius="60dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonEdit"
         app:layout_constraintEnd_toStartOf="@+id/buttonEdit"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buttonEdit"
         app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="تبدیل مقادیر"
+        app:cornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberForConvert"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumberForConvert"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberForConvert"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextNumberForConvert"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="مقدار کل مورد نظر"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonConvert"
+        app:layout_constraintTop_toBottomOf="@+id/MaterialRecyclerView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
