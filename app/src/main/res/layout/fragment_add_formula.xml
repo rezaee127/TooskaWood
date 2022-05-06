@@ -40,22 +40,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <EditText
-                    android:id="@+id/edit_text_material_name_1"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:ems="10"
-                    android:hint="نام ماده"
-                    android:inputType="textPersonName"
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="-1"
+                    android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue1"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_1"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
+                    android:id="@+id/edit_text_material_name_1"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView1"
+                    app:layout_constraintEnd_toStartOf="@+id/textView1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue1"
+                    app:layout_constraintTop_toTopOf="@+id/textView1"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
                     android:id="@+id/editTextMaterialValue1"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -64,25 +80,40 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_1"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-2"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_2"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue2"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_1" />
+                    app:layout_constraintTop_toTopOf="@+id/textView2"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue2"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -91,25 +122,41 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_2"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-3"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_3"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                    app:layout_constraintEnd_toStartOf="@+id/textView3"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue3"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_2" />
+                    app:layout_constraintTop_toTopOf="@+id/textView3"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue3"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -118,25 +165,41 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_3"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-4"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_4"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/textView4"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue4"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_3" />
+                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue4"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -145,25 +208,42 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_4"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-5"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_5"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                    app:layout_constraintEnd_toStartOf="@+id/textView5"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue5"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_4" />
+                    app:layout_constraintTop_toTopOf="@+id/textView5"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue5"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -172,25 +252,41 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_5"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-6"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_6"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                    app:layout_constraintEnd_toStartOf="@+id/textView6"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue6"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_5" />
+                    app:layout_constraintTop_toTopOf="@+id/textView6"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue6"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -199,26 +295,42 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_6"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
 
+
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-7"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_7"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                    app:layout_constraintEnd_toStartOf="@+id/textView7"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue7"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_6" />
+                    app:layout_constraintTop_toTopOf="@+id/textView7"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue7"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -227,25 +339,42 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_7"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-8"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_8"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                    app:layout_constraintEnd_toStartOf="@+id/textView8"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue8"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_7" />
+                    app:layout_constraintTop_toTopOf="@+id/textView8"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue8"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -254,26 +383,42 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_8"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
 
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-9"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_9"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                    app:layout_constraintEnd_toStartOf="@+id/textView9"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue9"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_8" />
+                    app:layout_constraintTop_toTopOf="@+id/textView9"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue9"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -282,25 +427,42 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_9"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-10"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
                 <EditText
                     android:id="@+id/edit_text_material_name_10"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
                     android:inputType="textPersonName"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                    app:layout_constraintEnd_toStartOf="@+id/textView10"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue10"
-                    app:layout_constraintTop_toBottomOf="@+id/edit_text_material_name_9" />
+                    app:layout_constraintTop_toTopOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.482" />
 
                 <EditText
                     android:id="@+id/editTextMaterialValue10"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
                     android:ems="10"
                     android:hint="مقدار ماده"
                     android:inputType="number"
@@ -309,7 +471,449 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_10"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-11"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_11"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                    app:layout_constraintEnd_toStartOf="@+id/textView11"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue11"
+                    app:layout_constraintTop_toTopOf="@+id/textView11"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue11"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_11"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_11"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_11"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-12"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_12"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                    app:layout_constraintEnd_toStartOf="@+id/textView12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue12"
+                    app:layout_constraintTop_toTopOf="@+id/textView12"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue12"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_12"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_12"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-13"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_13"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_13"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                    app:layout_constraintEnd_toStartOf="@+id/textView13"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue13"
+                    app:layout_constraintTop_toTopOf="@+id/textView13"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue13"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_13"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_13"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_13"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-14"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_14"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toStartOf="@+id/textView14"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue14"
+                    app:layout_constraintTop_toTopOf="@+id/textView14"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue14"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_14"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_14"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_14"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-15"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_15"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                    app:layout_constraintEnd_toStartOf="@+id/textView15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue15"
+                    app:layout_constraintTop_toTopOf="@+id/textView15"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue15"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_15"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_15"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-16"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_16"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                    app:layout_constraintEnd_toStartOf="@+id/textView16"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue16"
+                    app:layout_constraintTop_toTopOf="@+id/textView16"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue16"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_16"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_16"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_16"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-17"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_17"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                    app:layout_constraintEnd_toStartOf="@+id/textView17"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue17"
+                    app:layout_constraintTop_toTopOf="@+id/textView17"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue17"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_17"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_17"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_17"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-18"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_18"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                    app:layout_constraintEnd_toStartOf="@+id/textView18"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue18"
+                    app:layout_constraintTop_toTopOf="@+id/textView18"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue18"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_18"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_18"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_18"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-19"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_19"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toStartOf="@+id/textView19"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue19"
+                    app:layout_constraintTop_toTopOf="@+id/textView19"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue19"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_19"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_19"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_19"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="-20"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit_text_material_name_20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <EditText
+                    android:id="@+id/edit_text_material_name_20"
+                    android:layout_width="120dp"
+                    android:layout_height="49dp"
+                    android:layout_marginEnd="12dp"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                    app:layout_constraintEnd_toStartOf="@+id/textView20"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/editTextMaterialValue20"
+                    app:layout_constraintTop_toTopOf="@+id/textView20"
+                    app:layout_constraintVertical_bias="0.482" />
+
+                <EditText
+                    android:id="@+id/editTextMaterialValue20"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="20dp"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_text_material_name_20"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_text_material_name_20"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_20"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
