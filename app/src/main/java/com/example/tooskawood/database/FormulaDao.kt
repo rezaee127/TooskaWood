@@ -15,6 +15,9 @@ interface FormulaDao {
     @Query("SELECT * FROM Formula" )
     fun getFormulaList():List<Formula>
 
+    @Query("SELECT * FROM Formula" )
+    fun getFormulaListLiveData():LiveData<List<Formula>>
+
 
     @Query("SELECT COUNT(*) FROM Formula" )
     fun getCountFormula():Int

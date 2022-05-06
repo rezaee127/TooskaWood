@@ -25,6 +25,10 @@ object Repository {
         return formulaDao.getFormulaList()
     }
 
+    fun getFormulaListLiveData():LiveData<List<Formula>>{
+        return formulaDao.getFormulaListLiveData()
+    }
+
     fun getCountFormulaLiveData(): LiveData<Int> {
         return formulaDao.getCountFormulaLiveData()
     }

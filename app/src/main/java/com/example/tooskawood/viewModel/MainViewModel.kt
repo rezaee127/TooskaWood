@@ -20,6 +20,10 @@ class MainViewModel(app: Application): AndroidViewModel(app) {
         Repository.insert(formula)
     }
 
+    fun getFormulaListLiveData():LiveData<List<Formula>>{
+        return Repository.getFormulaListLiveData()
+    }
+
     fun getFormulaList():List<Formula>{
         return Repository.getFormulaList()
     }
