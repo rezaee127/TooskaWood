@@ -15,7 +15,7 @@ class FormulaAdapter(var onClickItem:(Int)->Unit) : ListAdapter<Formula, Formula
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textViewFormulaId=view.findViewById<TextView>(R.id.textViewFormulaId)
         val textViewFormulaCode=view.findViewById<TextView>(R.id.textViewFormulaCode)
-        val formulaRowItem=view.findViewById<View>(R.id.formulaRowItem)
+        val formulaRowItem=view.findViewById<View>(R.id.linearLayout1)
 
         fun bind(formula:Formula,onClickItem: (Int) -> Unit){
             textViewFormulaId.text=formula.id.toString()

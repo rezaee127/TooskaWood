@@ -64,7 +64,7 @@
 
 
     <LinearLayout
-        android:id="@+id/formulaRowItem"
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
@@ -77,13 +77,12 @@
 
 
         <TextView
-            android:id="@+id/textViewCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:minHeight="40dp"
-            android:text="CODE"
+            android:text="کد فرمول"
             android:textColor="@color/white2"/>
 
         <TextView
@@ -93,7 +92,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:minHeight="40dp"
-            android:text="ID"
+            android:text="شماره"
             android:textColor="@color/white2"/>
 
 
@@ -108,6 +107,6 @@
         android:layout_marginTop="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formulaRowItem" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

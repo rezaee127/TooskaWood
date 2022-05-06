@@ -35,7 +35,7 @@ class DetailOfFormulaFragment : Fragment() {
 
     private fun initView() {
         var id=requireArguments().getInt("id")
-        binding.textViewFormulaCode.text=vModel.getFormula(id).code
+        binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
         binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials)
     }
 

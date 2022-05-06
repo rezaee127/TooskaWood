@@ -43,12 +43,12 @@ class AddFormulaFragment : Fragment() {
     }
 
     private fun initView() {
-        listOfEditTextMaterialNames=arrayListOf(binding.editTextTextMaterialName1,
-            binding.editTextTextMaterialName2,binding.editTextTextMaterialName3,
-            binding.editTextTextMaterialName4,binding.editTextTextMaterialName5,
-            binding.editTextTextMaterialName6,binding.editTextTextMaterialName7,
-            binding.editTextTextMaterialName8,binding.editTextTextMaterialName9,
-            binding.editTextTextMaterialName10)
+        listOfEditTextMaterialNames=arrayListOf(binding.editTextMaterialName1,
+            binding.editTextMaterialName2,binding.editTextMaterialName3,
+            binding.editTextMaterialName4,binding.editTextMaterialName5,
+            binding.editTextMaterialName6,binding.editTextMaterialName7,
+            binding.editTextMaterialName8,binding.editTextMaterialName9,
+            binding.editTextMaterialName10)
 
         listOfEditTextMaterialValues= arrayListOf(binding.editTextMaterialValue1,
             binding.editTextMaterialValue2,binding.editTextMaterialValue3,
@@ -59,9 +59,9 @@ class AddFormulaFragment : Fragment() {
 
         binding.buttonSave.setOnClickListener {
             when{
-                binding.editTextTextFormulaCode.text.isNullOrBlank()-> binding.editTextTextFormulaCode.error="کد فرمول را وارد کنید"
-                vModel.searchFormula(binding.editTextTextFormulaCode.text.toString())!=0->binding.editTextTextFormulaCode.error="این کد قبلا وارد شده است"
-                binding.editTextTextMaterialName1.text.isNullOrBlank()-> binding.editTextTextMaterialName1.error="یک ماده وارد کنید"
+                binding.editTextFormulaCode2.text.isNullOrBlank()-> binding.editTextFormulaCode2.error="کد فرمول را وارد کنید"
+                vModel.searchFormula(binding.editTextFormulaCode2.text.toString())!=0->binding.editTextFormulaCode2.error="این کد قبلا وارد شده است"
+                binding.editTextMaterialName1.text.isNullOrBlank()-> binding.editTextMaterialName1.error="یک ماده وارد کنید"
                 binding.editTextMaterialValue1.text.isNullOrBlank()-> binding.editTextMaterialValue1.error="مقدار ماده را وارد کنید"
 
                 else ->{
@@ -74,7 +74,7 @@ class AddFormulaFragment : Fragment() {
                     }
 
                     vModel.insert(
-                        Formula(0,binding.editTextTextFormulaCode.text.toString(),listOfMaterials)
+                        Formula(0,binding.editTextFormulaCode2.text.toString(),listOfMaterials)
                     )
                     Toast.makeText(requireActivity(),"فرمول ذخیره شد", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.action_addFormulaFragment_to_showFormulaFragment)
