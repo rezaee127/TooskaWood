@@ -34,5 +34,8 @@
         <action
             android:id="@+id/action_detailOfFormulaFragment_to_addFormulaFragment"
             app:destination="@id/addFormulaFragment" />
+        <action
+            android:id="@+id/action_detailOfFormulaFragment_to_showFormulaFragment"
+            app:destination="@id/showFormulaFragment" />
     </fragment>
 </navigation>

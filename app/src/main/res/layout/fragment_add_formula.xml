@@ -303,7 +303,7 @@
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="30dp"
             app:cornerRadius="60dp"
-            android:text="ُذخیره"
+            android:text="ذخیره فرمول"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
