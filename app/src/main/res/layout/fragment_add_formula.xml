@@ -16,10 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:textAlignment="center"
             android:ems="10"
             android:hint="کد فرمول"
             android:inputType="textPersonName"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,8 +29,8 @@
             android:id="@+id/scv_2"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:layout_marginTop="28dp"
             android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/shape3"
             app:layout_constraintTop_toBottomOf="@+id/edit_text_formula_code_2"
             tools:layout_editor_absoluteX="16dp">
@@ -211,7 +211,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
@@ -298,11 +297,10 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="18dp"
+                    android:layout_height="26dp"
                     android:layout_marginTop="24dp"
                     android:text="-7"
                     android:textSize="18sp"
@@ -313,8 +311,8 @@
 
                 <EditText
                     android:id="@+id/edit_text_material_name_7"
-                    android:layout_width="120dp"
-                    android:layout_height="49dp"
+                    android:layout_width="127dp"
+                    android:layout_height="46dp"
                     android:layout_marginEnd="12dp"
                     android:ems="10"
                     android:hint="نام ماده"
@@ -340,7 +338,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_7"
                     app:layout_constraintVertical_bias="1.0" />
-
 
 
                 <TextView
@@ -386,7 +383,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -428,7 +424,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_9"
                     app:layout_constraintVertical_bias="1.0" />
-
 
 
                 <TextView
@@ -474,7 +469,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
@@ -516,7 +510,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_11"
                     app:layout_constraintVertical_bias="1.0" />
-
 
 
                 <TextView
@@ -562,7 +555,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
@@ -606,7 +598,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
@@ -648,7 +639,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_14"
                     app:layout_constraintVertical_bias="1.0" />
-
 
 
                 <TextView
@@ -737,7 +727,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
@@ -779,7 +768,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_17"
                     app:layout_constraintVertical_bias="1.0" />
-
 
 
                 <TextView
@@ -825,7 +813,6 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
@@ -867,8 +854,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/edit_text_material_name_19"
                     app:layout_constraintVertical_bias="1.0" />
-
-
 
 
                 <TextView
@@ -914,22 +899,34 @@
                     app:layout_constraintVertical_bias="1.0" />
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSave"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="30dp"
             android:text="ذخیره فرمول"
             app:cornerRadius="60dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonAdd5Rows"
+            app:layout_constraintTop_toBottomOf="@+id/scv_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAdd5Rows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="افزایش تعداد مواد"
+            app:cornerRadius="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSave"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSave"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/scv_2" />
+            app:layout_constraintTop_toTopOf="@id/buttonSave" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

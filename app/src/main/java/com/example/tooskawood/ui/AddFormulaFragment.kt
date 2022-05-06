@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
@@ -21,6 +22,11 @@ class AddFormulaFragment : Fragment() {
     var listOfEditTextMaterialNames=ArrayList<TextView>()
     var listOfEditTextMaterialValues=ArrayList<TextView>()
     val listOfMaterials= arrayListOf<Material>()
+    var arrayOfEditTextRows11to15= arrayListOf<EditText>()
+    var arrayOfTextViewRows11to15= arrayListOf<TextView>()
+    var arrayOfEditTextRows16to20= arrayListOf<EditText>()
+    var arrayOfTextViewRows16to20= arrayListOf<TextView>()
+    var j=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -38,38 +44,47 @@ class AddFormulaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        initArrays()
         initView()
     }
 
-    private fun initView() {
-        listOfEditTextMaterialNames=arrayListOf(binding.editTextMaterialName1,
-            binding.editTextMaterialName2,binding.editTextMaterialName3,
-            binding.editTextMaterialName4,binding.editTextMaterialName5,
-            binding.editTextMaterialName6,binding.editTextMaterialName7,
-            binding.editTextMaterialName8,binding.editTextMaterialName9,
-            binding.editTextMaterialName10)
 
-        listOfEditTextMaterialValues= arrayListOf(binding.editTextMaterialValue1,
-            binding.editTextMaterialValue2,binding.editTextMaterialValue3,
-            binding.editTextMaterialValue4,binding.editTextMaterialValue5,
-            binding.editTextMaterialValue6,binding.editTextMaterialValue7,
-            binding.editTextMaterialValue8,binding.editTextMaterialValue9,
-            binding.editTextMaterialValue10)
+    private fun initView() {
+        goneRows11to15()
+        goneRows16to20()
 
         val id=requireArguments().getInt("id")
+        addRow()
+
         if(id==0){
             save(id)
         }else{
             edit(id)
         }
-
-
     }
+
+    private fun addRow() {
+        binding.buttonAdd5Rows.setOnClickListener {
+            if (j==0){
+                visibleRows11to15()
+                j=1
+            }else if(j==1){
+                visibleRows16to20()
+            }
+        }
+    }
+
 
     private fun edit(id:Int) {
 
         vModel.getFormula(id).let {
+            if(it.materials.size>15){
+                visibleRows11to15()
+                visibleRows16to20()
+            }else if (it.materials.size>10){
+                visibleRows11to15()
+                j=1
+            }
             for(i in 0 until it.materials.size){
                 binding.editTextFormulaCode2.setText(it.code)
                 listOfEditTextMaterialNames[i].text = it.materials[i].name
@@ -108,4 +123,89 @@ class AddFormulaFragment : Fragment() {
             }
         }
     }
+
+
+
+
+    private fun initArrays() {
+        arrayOfEditTextRows11to15= arrayListOf(
+            binding.editTextMaterialName11,binding.editTextMaterialName12,
+            binding.editTextMaterialName13,binding.editTextMaterialName14,
+            binding.editTextMaterialName15,binding.editTextMaterialValue11,
+            binding.editTextMaterialValue12,binding.editTextMaterialValue13,
+            binding.editTextMaterialValue14,binding.editTextMaterialValue15)
+
+        arrayOfTextViewRows11to15=arrayListOf(binding.textView11,binding.textView12,
+            binding.textView13,binding.textView14,binding.textView15)
+
+        arrayOfEditTextRows16to20= arrayListOf(
+            binding.editTextMaterialName16,binding.editTextMaterialName17,
+            binding.editTextMaterialName18,binding.editTextMaterialName19,
+            binding.editTextMaterialName20,binding.editTextMaterialValue16,
+            binding.editTextMaterialValue17,binding.editTextMaterialValue18,
+            binding.editTextMaterialValue19,binding.editTextMaterialValue20)
+
+        arrayOfTextViewRows16to20=arrayListOf(binding.textView16,binding.textView17,
+            binding.textView18,binding.textView19,binding.textView20)
+
+
+        listOfEditTextMaterialNames=arrayListOf(binding.editTextMaterialName1,
+            binding.editTextMaterialName2,binding.editTextMaterialName3,
+            binding.editTextMaterialName4,binding.editTextMaterialName5,
+            binding.editTextMaterialName6,binding.editTextMaterialName7,
+            binding.editTextMaterialName8,binding.editTextMaterialName9,
+            binding.editTextMaterialName10,binding.editTextMaterialName11,
+            binding.editTextMaterialName12,binding.editTextMaterialName13,
+            binding.editTextMaterialName14,binding.editTextMaterialName15,
+            binding.editTextMaterialName16,binding.editTextMaterialName17,
+            binding.editTextMaterialName18,binding.editTextMaterialName19,
+            binding.editTextMaterialName20)
+
+        listOfEditTextMaterialValues= arrayListOf(binding.editTextMaterialValue1,
+            binding.editTextMaterialValue2,binding.editTextMaterialValue3,
+            binding.editTextMaterialValue4,binding.editTextMaterialValue5,
+            binding.editTextMaterialValue6,binding.editTextMaterialValue7,
+            binding.editTextMaterialValue8,binding.editTextMaterialValue9,
+            binding.editTextMaterialValue10,binding.editTextMaterialValue11,
+            binding.editTextMaterialValue12,binding.editTextMaterialValue13,
+            binding.editTextMaterialValue14,binding.editTextMaterialValue15,
+            binding.editTextMaterialValue16,binding.editTextMaterialValue17,
+            binding.editTextMaterialValue18,binding.editTextMaterialValue19,
+            binding.editTextMaterialValue20)
+
+    }
+
+
+
+
+    private fun goneRows11to15() {
+        for (i in arrayOfTextViewRows11to15.indices)
+            arrayOfTextViewRows11to15[i].visibility=View.GONE
+        for (i in arrayOfEditTextRows11to15.indices)
+            arrayOfEditTextRows11to15[i].visibility=View.GONE
+    }
+
+    private fun goneRows16to20() {
+        for (i in arrayOfTextViewRows16to20.indices)
+            arrayOfTextViewRows16to20[i].visibility=View.GONE
+        for (i in arrayOfEditTextRows16to20.indices)
+            arrayOfEditTextRows16to20[i].visibility=View.GONE
+    }
+
+    private fun visibleRows11to15() {
+        for (i in arrayOfTextViewRows11to15.indices)
+            arrayOfTextViewRows11to15[i].visibility=View.VISIBLE
+        for (i in arrayOfEditTextRows11to15.indices)
+            arrayOfEditTextRows11to15[i].visibility=View.VISIBLE
+    }
+
+    private fun visibleRows16to20() {
+        for (i in arrayOfTextViewRows16to20.indices)
+            arrayOfTextViewRows16to20[i].visibility=View.VISIBLE
+        for (i in arrayOfEditTextRows16to20.indices)
+            arrayOfEditTextRows16to20[i].visibility=View.VISIBLE
+        binding.buttonAdd5Rows.isEnabled=false
+    }
+
+
 }
