@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -76,9 +77,9 @@ class DetailOfFormulaFragment : Fragment() {
             snkbr.dismiss()
         })
 
-            .setTextColor(resources.getColor(R.color.whiteBack2))
-            .setActionTextColor(resources.getColor(R.color.white))
-            .setBackgroundTint(resources.getColor(R.color.gray))
+            .setTextColor(ContextCompat.getColor(requireContext(),(R.color.whiteBack2)))
+            .setActionTextColor(ContextCompat.getColor(requireContext(),(R.color.white)))
+            .setBackgroundTint(ContextCompat.getColor(requireContext(),(R.color.gray)))
             .show()
     }
 
