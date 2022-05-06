@@ -46,10 +46,10 @@ class ShowFormulaFragment : Fragment() {
     private fun setRecyclerView() {
         val formulaAdapter = FormulaAdapter({ goToDetailFragment(it) })
         binding.formulaRecyclerView.adapter = formulaAdapter
-        val formula1= Formula(1,"formula1",listOf(Material(1,"سرب", 120),Material(2,"نیکل", 150)))
-        val formula2= Formula(2,"formula2",listOf(Material(1,"قلع", 140),Material(2,"آهن", 220)))
-        vModel.insert(formula1)
-        vModel.insert(formula2)
+//        val formula1= Formula(1,"formula1",listOf(Material(1,"سرب", 120),Material(2,"نیکل", 150)))
+//        val formula2= Formula(2,"formula2",listOf(Material(1,"قلع", 140),Material(2,"آهن", 220)))
+//        vModel.insert(formula1)
+//        vModel.insert(formula2)
 
         formulaAdapter.submitList(vModel.getFormulaList())
     }
@@ -59,10 +59,12 @@ class ShowFormulaFragment : Fragment() {
     private fun initView() {
 
         binding.floatingActionButton.setOnClickListener {
-            findNavController().navigate(R.id.action_showFormulaFragment_to_addFormulaFragment)
+            val bundle = bundleOf("id" to 0,"edit" to false)
+            findNavController().navigate(R.id.action_showFormulaFragment_to_addFormulaFragment,bundle)
         }
 
         vModel.getCountFormulaLiveData().observe(requireActivity()) {
+            binding.textViewCountFormula.text = "تعداد فرمول ها : $it"
             if (it == 0) {
                 binding.buttonSearch.isEnabled = false
                 binding.editTextSearch.isEnabled = false

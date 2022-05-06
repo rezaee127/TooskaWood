@@ -57,10 +57,35 @@ class AddFormulaFragment : Fragment() {
             binding.editTextMaterialValue8,binding.editTextMaterialValue9,
             binding.editTextMaterialValue10)
 
+        val id=requireArguments().getInt("id")
+        if(id==0){
+            save(id)
+        }else{
+            edit(id)
+        }
+
+
+    }
+
+    private fun edit(id:Int) {
+
+        vModel.getFormula(id).let {
+            for(i in 0 until it.materials.size){
+                binding.editTextFormulaCode2.setText(it.code)
+                listOfEditTextMaterialNames[i].text = it.materials[i].name
+                listOfEditTextMaterialValues[i].text = it.materials[i].value.toString()
+            }
+        }
+
+        save(id)
+    }
+
+
+    private fun save(id:Int) {
         binding.buttonSave.setOnClickListener {
             when{
                 binding.editTextFormulaCode2.text.isNullOrBlank()-> binding.editTextFormulaCode2.error="کد فرمول را وارد کنید"
-                vModel.searchFormula(binding.editTextFormulaCode2.text.toString())!=0->binding.editTextFormulaCode2.error="این کد قبلا وارد شده است"
+                id==0 && vModel.searchFormula(binding.editTextFormulaCode2.text.toString())!=0->binding.editTextFormulaCode2.error="این کد قبلا وارد شده است"
                 binding.editTextMaterialName1.text.isNullOrBlank()-> binding.editTextMaterialName1.error="یک ماده وارد کنید"
                 binding.editTextMaterialValue1.text.isNullOrBlank()-> binding.editTextMaterialValue1.error="مقدار ماده را وارد کنید"
 
@@ -72,16 +97,15 @@ class AddFormulaFragment : Fragment() {
                                 listOfEditTextMaterialValues[i].text.toString().toLong()))
                         }
                     }
-
-                    vModel.insert(
-                        Formula(0,binding.editTextFormulaCode2.text.toString(),listOfMaterials)
-                    )
+                    if (id==0)
+                        vModel.insert(Formula(id,binding.editTextFormulaCode2.text.toString(),listOfMaterials))
+                    else
+                        vModel.update(Formula(id,binding.editTextFormulaCode2.text.toString(),listOfMaterials))
                     Toast.makeText(requireActivity(),"فرمول ذخیره شد", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.action_addFormulaFragment_to_showFormulaFragment)
 
                 }
             }
         }
-
     }
 }

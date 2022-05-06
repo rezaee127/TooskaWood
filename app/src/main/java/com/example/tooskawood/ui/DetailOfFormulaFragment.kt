@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.tooskawood.R
 import com.example.tooskawood.databinding.FragmentDetailOfFormulaBinding
 import com.example.tooskawood.viewModel.MainViewModel
 
@@ -36,7 +39,16 @@ class DetailOfFormulaFragment : Fragment() {
     private fun initView() {
         var id=requireArguments().getInt("id")
         binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
-        binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials)
+        binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,id,{edit(id)})
+
+        binding.buttonEdit.setOnClickListener {
+            edit(id)
+        }
+    }
+
+    private fun edit(id:Int){
+        val bundle = bundleOf("id" to id,"edit" to true)
+        findNavController().navigate(R.id.action_detailOfFormulaFragment_to_addFormulaFragment, bundle)
     }
 
 

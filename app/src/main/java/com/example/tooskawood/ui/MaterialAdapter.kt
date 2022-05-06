@@ -9,17 +9,22 @@ import com.example.tooskawood.Material
 import com.example.tooskawood.R
 
 
-class MaterialAdapter(var dataSet:List<Material>) : RecyclerView.Adapter<MaterialAdapter.ViewHolder>() {
+class MaterialAdapter(var dataSet:List<Material>,var formulaId:Int,var onClickItem:(Int)->Unit) : RecyclerView.Adapter<MaterialAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var textViewMaterialId=view.findViewById<TextView>(R.id.textViewMaterialId)
         var textViewMaterialName=view.findViewById<TextView>(R.id.textViewMaterialName)
         var textViewMaterialValue=view.findViewById<TextView>(R.id.textViewMaterialValue)
+        var materialRowItem=view.findViewById<View>(R.id.MaterialRowItem)
 
-        fun bind(material:Material){
+        fun bind(material:Material,formulaId:Int,onClickItem:(Int)->Unit){
             textViewMaterialId.text=material.id.toString()
             textViewMaterialName.text=material.name
             textViewMaterialValue.text=material.value.toString()
+
+            materialRowItem.setOnClickListener {
+                onClickItem(formulaId)
+            }
         }
 
     }
@@ -35,7 +40,7 @@ class MaterialAdapter(var dataSet:List<Material>) : RecyclerView.Adapter<Materia
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.bind (dataSet[position])
+        viewHolder.bind (dataSet[position],formulaId,onClickItem)
     }
 
 
