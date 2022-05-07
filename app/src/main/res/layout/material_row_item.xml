@@ -9,12 +9,21 @@
     android:orientation="horizontal"
     android:paddingHorizontal="16dp">
 
+    <TextView
+        android:id="@+id/textViewConverter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:text="Text" />
+
 
     <TextView
         android:id="@+id/textViewMaterialValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:gravity="center"
         android:minHeight="40dp"
         android:text="Text" />
@@ -23,7 +32,7 @@
         android:id="@+id/textViewMaterialName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:gravity="center"
         android:minHeight="40dp"
         android:text="Text" />
@@ -36,6 +45,5 @@
         android:gravity="center"
         android:minHeight="40dp"
         android:text="Text" />
-
 
 </LinearLayout>

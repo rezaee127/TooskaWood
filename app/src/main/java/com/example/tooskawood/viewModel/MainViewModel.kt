@@ -16,6 +16,14 @@ class MainViewModel(app: Application): AndroidViewModel(app) {
 
     }
 
+    fun convertValue(id:Int):Long {
+        var sumValue=0L
+        for(i in getFormula(id).materials.indices){
+            sumValue +=getFormula(id).materials[i].value
+        }
+        return sumValue
+    }
+
     fun insert(formula: Formula){
         Repository.insert(formula)
     }

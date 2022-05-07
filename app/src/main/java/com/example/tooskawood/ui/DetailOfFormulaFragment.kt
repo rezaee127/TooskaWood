@@ -40,11 +40,22 @@ class DetailOfFormulaFragment : Fragment() {
     }
 
     private fun initView() {
-        var id=requireArguments().getInt("id")
-        binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
-        binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,id,{edit(id)})
+        val id=requireArguments().getInt("id")
+        val sumValue = vModel.convertValue(id)
+        var numberForConvert= 0L
+        binding.buttonConvert.setOnClickListener {
+            if (binding.editTextNumberForConvert.text.isNullOrBlank()){
+                binding.editTextNumberForConvert.error="یک عدد وارد کنید"
+            }else{
+                numberForConvert=binding.editTextNumberForConvert.text.toString().toLong()
+                binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,sumValue,numberForConvert)
+            }
+        }
 
-        convertValue(id)
+        binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
+        binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,sumValue,numberForConvert)
+
+
 
         binding.buttonEdit.setOnClickListener {
             edit(id)
@@ -56,13 +67,7 @@ class DetailOfFormulaFragment : Fragment() {
 
     }
 
-    private fun convertValue(id:Int) {
-        var sumValue=0L
-        for(i in vModel.getFormula(id).materials.indices){
-            sumValue +=vModel.getFormula(id).materials[i].value
-        }
 
-    }
 
     private fun delete(id:Int){
         val snkbr = Snackbar.make(binding.detailOfFormulaFragment, "Do you want to delete the formula?",
