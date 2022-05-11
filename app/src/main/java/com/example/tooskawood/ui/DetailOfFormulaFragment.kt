@@ -1,5 +1,7 @@
 package com.example.tooskawood.ui
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -55,8 +57,6 @@ class DetailOfFormulaFragment : Fragment() {
         binding.textViewFormulaCodeInDetailFragment.text=vModel.getFormula(id).code
         binding.MaterialRecyclerView.adapter=MaterialAdapter(vModel.getFormula(id).materials,sumValue,numberForConvert)
 
-
-
         binding.buttonEdit.setOnClickListener {
             edit(id)
         }
@@ -64,28 +64,24 @@ class DetailOfFormulaFragment : Fragment() {
         binding.buttonDelete.setOnClickListener {
             delete(id)
         }
-
     }
 
 
 
     private fun delete(id:Int){
-        val snkbr = Snackbar.make(binding.detailOfFormulaFragment, "Do you want to delete the formula?",
-            Snackbar.LENGTH_LONG)
 
-        snkbr.duration = 9000
-
-        snkbr.setAction("yes",  View.OnClickListener {
-            vModel.deleteById(id)
-            Toast.makeText(requireContext(),"حذف فرمول انجام شد", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_detailOfFormulaFragment_to_showFormulaFragment)
-            snkbr.dismiss()
-        })
-
-            .setTextColor(ContextCompat.getColor(requireContext(),(R.color.whiteBack2)))
-            .setActionTextColor(ContextCompat.getColor(requireContext(),(R.color.white)))
-            .setBackgroundTint(ContextCompat.getColor(requireContext(),(R.color.gray)))
-            .show()
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setMessage("آیا می خواهید که فرمول را حذف کنید؟")
+            .setPositiveButton("بله",
+                DialogInterface.OnClickListener { dialog, id2 ->
+                    vModel.deleteById(id)
+                    Toast.makeText(requireContext(),"حذف فرمول انجام شد", Toast.LENGTH_SHORT).show()
+                    findNavController().navigate(R.id.action_detailOfFormulaFragment_to_showFormulaFragment)
+                })
+            .setNegativeButton("خیر",
+                DialogInterface.OnClickListener { dialog, id2 ->
+                })
+        builder.create().show()
     }
 
 
