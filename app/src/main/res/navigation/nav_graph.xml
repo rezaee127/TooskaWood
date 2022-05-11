@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_showFormulaFragment_to_addFormulaFragment"
             app:destination="@id/addFormulaFragment" />
+        <action
+            android:id="@+id/action_showFormulaFragment_to_detailOfFormulaFragment"
+            app:destination="@id/detailOfFormulaFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFormulaFragment"
@@ -21,6 +24,18 @@
         tools:layout="@layout/fragment_add_formula" >
         <action
             android:id="@+id/action_addFormulaFragment_to_showFormulaFragment"
+            app:destination="@id/showFormulaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailOfFormulaFragment"
+        android:name="com.example.tooskawood.ui.DetailOfFormulaFragment"
+        android:label="fragment_detail_of_formula"
+        tools:layout="@layout/fragment_detail_of_formula" >
+        <action
+            android:id="@+id/action_detailOfFormulaFragment_to_addFormulaFragment"
+            app:destination="@id/addFormulaFragment" />
+        <action
+            android:id="@+id/action_detailOfFormulaFragment_to_showFormulaFragment"
             app:destination="@id/showFormulaFragment" />
     </fragment>
 </navigation>

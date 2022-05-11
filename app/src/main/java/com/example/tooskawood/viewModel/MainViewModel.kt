@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.example.tooskawood.Formula
-import com.example.tooskawood.Repository
+import com.example.tooskawood.repository.Repository
 
 class MainViewModel(app: Application): AndroidViewModel(app) {
 
@@ -16,8 +16,20 @@ class MainViewModel(app: Application): AndroidViewModel(app) {
 
     }
 
+    fun convertValue(id:Int):Long {
+        var sumValue=0L
+        for(i in getFormula(id).materials.indices){
+            sumValue +=getFormula(id).materials[i].value
+        }
+        return sumValue
+    }
+
     fun insert(formula: Formula){
         Repository.insert(formula)
+    }
+
+    fun getFormulaListLiveData():LiveData<List<Formula>>{
+        return Repository.getFormulaListLiveData()
     }
 
     fun getFormulaList():List<Formula>{
