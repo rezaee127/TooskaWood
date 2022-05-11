@@ -3,34 +3,28 @@ package com.example.tooskawood.ui
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.tooskawood.Formula
-import com.example.tooskawood.Material
 import com.example.tooskawood.R
 import com.example.tooskawood.databinding.FragmentShowFormulaBinding
 import com.example.tooskawood.viewModel.MainViewModel
 
 
 class ShowFormulaFragment : Fragment() {
-    lateinit var binding : FragmentShowFormulaBinding
+    lateinit var binding: FragmentShowFormulaBinding
     val vModel: MainViewModel by activityViewModels()
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentShowFormulaBinding.inflate (inflater, container, false)
+        binding = FragmentShowFormulaBinding.inflate(inflater, container, false)
         return binding.root
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_show_formula, container, false)
@@ -47,7 +41,7 @@ class ShowFormulaFragment : Fragment() {
         val formulaAdapter = FormulaAdapter({ goToDetailFragment(it) })
         binding.formulaRecyclerView.adapter = formulaAdapter
 
-        vModel.getFormulaListLiveData().observe(requireActivity()){
+        vModel.getFormulaListLiveData().observe(requireActivity()) {
             formulaAdapter.submitList(it)
         }
     }
@@ -57,15 +51,20 @@ class ShowFormulaFragment : Fragment() {
     private fun initView() {
 
         binding.floatingActionButton.setOnClickListener {
-            val bundle = bundleOf("id" to 0,"edit" to false)
-            findNavController().navigate(R.id.action_showFormulaFragment_to_addFormulaFragment,bundle)
+            val bundle = bundleOf("id" to 0, "edit" to false)
+            findNavController().navigate(
+                R.id.action_showFormulaFragment_to_addFormulaFragment,
+                bundle
+            )
         }
 
         vModel.getCountFormulaLiveData().observe(requireActivity()) {
-            binding.textViewCountFormula.text = "تعداد فرمول ها : $it"
+            binding.textViewCountFormula.text = "تعداد فرمولها: $it"
             if (it == 0) {
                 binding.buttonSearch.isEnabled = false
                 binding.editTextSearch.isEnabled = false
+                binding.linearLayout3.visibility = View.GONE
+                binding.textViewCountFormula.visibility=View.INVISIBLE
             }
         }
 
@@ -95,6 +94,9 @@ class ShowFormulaFragment : Fragment() {
 
     private fun goToDetailFragment(id: Int) {
         val bundle = bundleOf("id" to id)
-        findNavController().navigate(R.id.action_showFormulaFragment_to_detailOfFormulaFragment, bundle)
+        findNavController().navigate(
+            R.id.action_showFormulaFragment_to_detailOfFormulaFragment,
+            bundle
+        )
     }
 }

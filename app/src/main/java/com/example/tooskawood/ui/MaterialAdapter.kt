@@ -30,7 +30,7 @@ class MaterialAdapter(var dataSet:List<Material>,var sumValue:Long,var numberFor
                 textViewConverter.text="0"
             }else{
                 val x = (material.value * numberForConvert).toDouble()/sumValue.toDouble()
-                textViewConverter.text= format("%.3f", x)
+                textViewConverter.text= format("%.2f", x)
             }
         }
 
